@@ -3,7 +3,7 @@ import axios from "axios";
 import Navbar_ from "../components/Navbar_";
 import Loader from "../components/Loader";
 import { useParams } from "react-router-dom";
-import Drop from "../components/Drop.jsx";
+import Drop from "../components/drop.jsx";
 
 function User() {
   const { id } = useParams();
@@ -29,9 +29,9 @@ function User() {
       if (!storedUser) return;
 
       try {
-        const dropsRes = await axios.get(`/api/drops/user/${id}`);
+        const dropsRes = await axios.get(`https://senpaiya.onrender.com/api/drops/user/${id}`);
         setDrops(dropsRes.data);
-        const response = await axios.get(`/api/users/${id}`);
+        const response = await axios.get(`https://senpaiya.onrender.com/api/users/${id}`);
         if (response.data.success) {
           const profileData = response.data.data;
           setUser(profileData);
@@ -53,7 +53,7 @@ function User() {
 
   const handleFollowToggle = async () => {
     if (!loggedInUser) return;
-    const endpoint = isFollowing ? "/api/users/unfollow" : "/api/users/follow";
+    const endpoint = isFollowing ? "https://senpaiya.onrender.com/api/users/unfollow" : "https://senpaiya.onrender.com/api/users/follow";
 
     try {
       const response = await axios.post(endpoint, {
