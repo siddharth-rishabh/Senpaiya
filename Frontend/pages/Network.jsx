@@ -8,15 +8,12 @@ const Network = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [currentUser, setCurrentUser] = useState(null);
-
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const storedUser = JSON.parse(localStorage.getItem("user"));
-        setCurrentUser(storedUser);
 
-        const response = await axios.get("/api/users", {
+        const response = await axios.get("https://senpaiya.onrender.com/api/users", {
           headers: { Authorization: `Bearer ${storedUser.token}` },
         });
 

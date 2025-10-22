@@ -7,7 +7,7 @@ const Drop = ({ drop, onLike }) => {
       const token = localStorage.getItem("token");
 
       const res = await axios.patch(
-        `http://localhost:5000/api/drops/${drop._id}/like`,
+        `https://senpaiya.onrender.com/api/drops/${drop._id}/like`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

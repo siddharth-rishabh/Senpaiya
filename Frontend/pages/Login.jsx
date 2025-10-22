@@ -13,10 +13,10 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post("/api/users/login", {
+      const response = await axios.post("https://senpaiya.onrender.com/api/users/login", {
         email,
         password,
-        
+
       });
       setMessage("Login successful!");
       console.log("User Data:", response.data);

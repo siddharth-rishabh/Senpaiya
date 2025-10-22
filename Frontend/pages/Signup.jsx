@@ -30,7 +30,7 @@ function Signup() {
     }
 
     try {
-      const response = await axios.post("/api/users/register", {
+      const response = await axios.post("https://senpaiya.onrender.com/api/users/register", {
         fullName: fullname,
         email,
         username,

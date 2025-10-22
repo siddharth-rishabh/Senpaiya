@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Drop from "./Drop";
+import Drop from "./drop";
 import Loader from "./Loader";
 
 function Feed() {
@@ -10,7 +10,7 @@ function Feed() {
   useEffect(() => {
     const fetchDrops = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/drops");
+        const res = await axios.get("https://senpaiya.onrender.com/api/drops");
         setDrops(res.data || []);
       } catch (err) {
         console.error(err);

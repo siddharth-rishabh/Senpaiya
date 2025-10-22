@@ -26,7 +26,7 @@ const CreateDrop = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:5000/api/drops", {
+      const response = await axios.post("https://senpaiya.onrender.com/api/drops", {
         title,
         description,
         tags: [category],
