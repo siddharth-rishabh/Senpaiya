@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar_ from "../components/Navbar_";
 import axios from "axios";
 import Loader from "../components/Loader";
 
 const CreateDrop = () => {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
@@ -39,7 +41,7 @@ const CreateDrop = () => {
         setDescription("");
         setCategory("");
         alert("Drop posted successfully!");
-        window.location.href = "/home";
+        navigate("/home");
       }
     } catch (error) {
       console.error(error);

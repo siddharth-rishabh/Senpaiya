@@ -59,7 +59,7 @@ const Loader = () => {
           {/* Center logo */}
           <div className="relative z-10">
             <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-400 via-purple-400 to-cyan-400 animate-pulse">
-              <img src="senpai_bg.png" alt="loader"/>
+              <img src="senpai_bg.png" alt=""/>
             </div>
           </div>
 

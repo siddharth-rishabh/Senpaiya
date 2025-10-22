@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar_() {
+  const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
 
   useEffect(() => {
@@ -14,20 +15,20 @@ function Navbar_() {
   const handleLogout = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-    window.location.href = "/";
+    navigate("/");
   };
 
   return (
     <div className="bg-[#1F2937] w-screen mt-0 p-0 sticky top-0 z-10">
       <div className="bg-[#1F2937] text-white rounded-2xl flex items-center my-2 mx-3">
         <div className="w-1/2">
-          <a href="/home">
+          <Link to="/home">
             <img
               src="/senpai_logo.png"
               alt="logo"
               className="h-12 scale-125 w-auto ml-3"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="w-1/2 flex justify-end items-center">
