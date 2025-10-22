@@ -171,7 +171,7 @@ function Login() {
             </h2>
 
             {message && (
-              <div className="mb-4 text-center text-red-400">{message}</div>
+              <div className="mb-4 text-center text-white-400">{message}</div>
             )}
             <form onSubmit={handleSubmit} className="grid justify-center">
               <div className="mb-4 w-64">
