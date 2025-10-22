@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
 
 function Signup() {
+  const navigate = useNavigate();
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -40,7 +42,7 @@ function Signup() {
       });
       console.log("Signup successful:", response.data);
       alert("Account created successfully!");
-      window.location.href = "/";
+      navigate("/");
     } catch (error) {
       console.error("Signup error:", error);
       alert("Signup failed. Please try again.");

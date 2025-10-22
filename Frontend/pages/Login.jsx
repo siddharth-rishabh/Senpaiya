@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -26,7 +28,7 @@ function Login() {
       console.log(response.data.token);
 
       setTimeout(() => {
-        window.location.href = "/home";
+        navigate("/home");
       }, 800);
     } catch (error) {
       setMessage(error.response?.data?.message || "Login failed!");
