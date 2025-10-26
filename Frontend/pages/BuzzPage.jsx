@@ -6,27 +6,25 @@ function BuzzPage() {
     <div>
       <Navbar />
       <div className="min-h-screen p-6">
-        <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            
-              <h1 className="text-white text-3xl font-bold">Buzzz</h1>
-            
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8">
+            <h1 className="text-white text-2xl sm:text-3xl font-bold mb-4 sm:mb-0">Buzzz</h1>
 
-            <div className="flex items-center space-x-3">
-              <button className="px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-slate-300 hover:bg-slate-700/70 hover:text-white transition-all text-sm">
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <button className="px-3 sm:px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-slate-300 hover:bg-slate-700/70 hover:text-white transition-all text-xs sm:text-sm">
                 Mark all as read
               </button>
-              <button className="px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-slate-300 hover:bg-slate-700/70 hover:text-white transition-all text-sm">
+              <button className="px-3 sm:px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-slate-300 hover:bg-slate-700/70 hover:text-white transition-all text-xs sm:text-sm">
                 Settings
               </button>
             </div>
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex space-x-1 mb-8 bg-slate-700/30 p-1 rounded-xl overflow-x-auto">
+          <div className="flex space-x-1 mb-6 sm:mb-8 bg-slate-700/30 p-1 rounded-xl overflow-x-auto">
             <button
-              className="px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all bg-slate-600 text-white shadow-sm"
+              className="px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all bg-slate-600 text-white shadow-sm"
             >
               All
               <span className="ml-2 px-2 py-1 text-xs rounded-full bg-slate-500">
@@ -35,7 +33,7 @@ function BuzzPage() {
             </button>
 
             <button
-              className="px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
+              className="px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
             >
               Guidance
               <span className="ml-2 px-2 py-1 text-xs rounded-full bg-slate-600/50">
@@ -44,7 +42,7 @@ function BuzzPage() {
             </button>
 
             <button
-              className="px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
+              className="px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
             >
               Trending
               <span className="ml-2 px-2 py-1 text-xs rounded-full bg-slate-600/50">
@@ -53,7 +51,7 @@ function BuzzPage() {
             </button>
 
             <button
-              className="px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
+              className="px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
             >
               Whispers
               <span className="ml-2 px-2 py-1 text-xs rounded-full bg-slate-600/50">
@@ -62,7 +60,7 @@ function BuzzPage() {
             </button>
 
             <button
-              className="px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
+              className="px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
             >
               Saves
               <span className="ml-2 px-2 py-1 text-xs rounded-full bg-slate-600/50">
@@ -71,7 +69,7 @@ function BuzzPage() {
             </button>
 
             <button
-              className="px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
+              className="px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all text-slate-400 hover:text-white hover:bg-slate-700/50"
             >
               Followers
               <span className="ml-2 px-2 py-1 text-xs rounded-full bg-slate-600/50">

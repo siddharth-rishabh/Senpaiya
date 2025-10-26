@@ -2,21 +2,19 @@ import React from "react";
 
 const Chats = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0D1B2A] text-white px-4">
-      
-
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0D1B2A] text-white px-4 sm:px-2">
       {/* Heading */}
-      <h1 className="text-5xl font-extrabold mb-4 text-center">
+      <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 text-center">
         Coming Soon
       </h1>
 
       {/* Subtext */}
-      <p className="text-center text-white/70 max-w-md mb-8">
+      <p className="text-center text-white/70 max-w-md mb-8 text-sm sm:text-base">
         We are working hard to bring you this feature. Stay tuned for updates!
       </p>
 
       {/* Notify Me Button */}
-      <button className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg">
+      <button className="px-4 sm:px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg text-sm sm:text-base">
         Notify Me
       </button>
 

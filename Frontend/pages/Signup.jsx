@@ -138,10 +138,10 @@ function Signup() {
         ></div>
       </div>
 
-      <div className="flex w-full max-w-6xl items-center relative z-10">
+      <div className="flex flex-col lg:flex-row w-full max-w-6xl items-center relative z-10">
         {/* Left Section */}
-        <div className="flex-1 flex flex-col justify-center px-16 relative">
-          <h1 className="text-white text-5xl font-bold leading-tight mb-5 relative z-10">
+        <div className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-16 relative text-center lg:text-left">
+          <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 relative z-10">
             Join Our
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -149,24 +149,24 @@ function Signup() {
             </span>
             ...
           </h1>
-          <p className="text-slate-300 text-base relative z-10 mb-8">
+          <p className="text-slate-300 text-sm sm:text-base relative z-10 mb-8">
             Create your account and start your
-            <br />
+            <br className="hidden sm:block" />
             journey with{" "}
             <span className="text-blue-300 font-medium">Senpais</span> ✨
           </p>
 
           {/* Feature highlights */}
           <div className="space-y-3 relative z-10">
-            <div className="flex items-center text-slate-400 text-sm">
+            <div className="flex items-center text-slate-400 text-xs sm:text-sm">
               <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
               <span>Connect with like-minded developers</span>
             </div>
-            <div className="flex items-center text-slate-400 text-sm">
+            <div className="flex items-center text-slate-400 text-xs sm:text-sm">
               <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
               <span>Share knowledge and collaborate</span>
             </div>
-            <div className="flex items-center text-slate-400 text-sm">
+            <div className="flex items-center text-slate-400 text-xs sm:text-sm">
               <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
               <span>Build your professional network</span>
             </div>
@@ -174,9 +174,9 @@ function Signup() {
         </div>
 
         {/* Right Section */}
-        <div className="flex-1 flex justify-center items-center px-16">
-          <div className="bg-slate-700/80 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-8 w-full max-w-md shadow-[inset_0_0_35px_rgba(59,130,246,0.3)]">
-            <h2 className="text-white text-2xl font-normal text-center mb-6">
+        <div className="flex-1 flex justify-center items-center px-4 sm:px-8 lg:px-16 mt-8 lg:mt-0">
+          <div className="bg-slate-700/80 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-4 sm:p-8 w-full max-w-md shadow-[inset_0_0_35px_rgba(59,130,246,0.3)]">
+            <h2 className="text-white text-xl sm:text-2xl font-normal text-center mb-6">
               Sign up
             </h2>
 
@@ -187,7 +187,7 @@ function Signup() {
                   placeholder="Full Name"
                   value={fullname}
                   onChange={(e) => setFullname(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60 text-sm sm:text-base"
                 />
               </div>
 
@@ -197,7 +197,7 @@ function Signup() {
                   placeholder="Email Address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60 text-sm sm:text-base"
                 />
               </div>
 
@@ -207,7 +207,7 @@ function Signup() {
                   placeholder="Username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60 text-sm sm:text-base"
                 />
               </div>
 
@@ -217,7 +217,7 @@ function Signup() {
                   placeholder="Branch"
                   value={branch}
                   onChange={(e) => setBranch(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60 text-sm sm:text-base"
                 />
               </div>
 
@@ -226,7 +226,7 @@ function Signup() {
                   id="role-select"
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60 text-sm sm:text-base"
                 >
                   <option value="">Please choose your role</option>
                   <option value="senpai">Senpai(Want to Guide)</option>
@@ -240,7 +240,7 @@ function Signup() {
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60 text-sm sm:text-base"
                 />
               </div>
 
@@ -250,7 +250,7 @@ function Signup() {
                   placeholder="Confirm Password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60 text-sm sm:text-base"
                 />
               </div>
 
@@ -263,7 +263,7 @@ function Signup() {
                 />
                 <label
                   htmlFor="terms"
-                  className="text-slate-400 text-sm leading-relaxed"
+                  className="text-slate-400 text-xs sm:text-sm leading-relaxed"
                 >
                   I agree to the{" "}
                   <a
@@ -284,13 +284,13 @@ function Signup() {
 
               <button
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30 active:translate-y-0 transition-all duration-300 tracking-wide"
+                className="w-full py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30 active:translate-y-0 transition-all duration-300 tracking-wide text-sm sm:text-base"
               >
                 Create Account
               </button>
             </form>
 
-            <div className="text-center mt-5 text-slate-400 text-sm">
+            <div className="text-center mt-5 text-slate-400 text-xs sm:text-sm">
               Already have an account?{" "}
               <a
                 href="/"

@@ -58,16 +58,16 @@ const CreateDrop = () => {
       <Navbar_ />
       {loading && <Loader />}
       <div className="min-h-screen bg-[#0D1B2A] p-6">
-        <div className="max-w-xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-white text-3xl font-bold mb-2">Create Drop</h1>
+      <div className="max-w-xl mx-auto px-4 sm:px-6">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-white text-2xl sm:text-3xl font-bold mb-2">Create Drop</h1>
             <p className="text-slate-400 text-sm">
               Share your knowledge with the community
             </p>
           </div>
 
-          <div className="bg-slate-700/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 shadow-lg">
-            <form className="space-y-6" onSubmit={handleSubmit}>
+          <div className="bg-slate-700/60 backdrop-blur-sm rounded-2xl p-4 sm:p-8 border border-slate-600/50 shadow-lg">
+            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
               {/* Title */}
               <div>
                 <label className="block text-slate-300 text-sm font-medium mb-2">
@@ -78,7 +78,7 @@ const CreateDrop = () => {
                   placeholder="What do you want to share or ask?"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
                   required
                 />
               </div>
@@ -94,7 +94,7 @@ const CreateDrop = () => {
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   required
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-none text-sm sm:text-base"
                 ></textarea>
                 <p className="text-slate-500 text-xs mt-2">
                   You can use markdown formatting
@@ -109,7 +109,7 @@ const CreateDrop = () => {
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
                   required
                 >
                   <option value="">Select a category</option>
@@ -128,7 +128,7 @@ const CreateDrop = () => {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-600 hover:shadow-lg hover:shadow-blue-500/25 transition-all"
+                  className="px-4 sm:px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-600 hover:shadow-lg hover:shadow-blue-500/25 transition-all text-sm sm:text-base"
                 >
                   Post Drop
                 </button>
@@ -137,7 +137,7 @@ const CreateDrop = () => {
           </div>
 
           {/* Tips */}
-          <div className="mt-6 bg-slate-700/40 border border-slate-600/30 rounded-lg p-4">
+          <div className="mt-4 sm:mt-6 bg-slate-700/40 border border-slate-600/30 rounded-lg p-4">
             <h3 className="text-white text-sm font-semibold mb-2">
               Tips for a great Drop:
             </h3>

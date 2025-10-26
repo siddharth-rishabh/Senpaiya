@@ -148,39 +148,39 @@ function Login() {
         ></div>
       </div>
 
-      <div className="flex w-full max-w-6xl items-center relative z-10">
+      <div className="flex flex-col lg:flex-row w-full max-w-6xl items-center relative z-10">
         {/* Left Section */}
-        <div className="flex-1 flex flex-col justify-center px-16 relative">
-          <h1 className="text-white text-7xl font-extrabold leading-tight mb-5 relative z-10">
+        <div className="flex-1 flex flex-col justify-center px-4 sm:px-8 lg:px-16 relative text-center lg:text-left">
+          <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-5 relative z-10">
             Welcome
             <br />
             Back ...
           </h1>
-          <p className="text-slate-300 text-base relative z-10">
+          <p className="text-slate-300 text-sm sm:text-base relative z-10">
             Continue your journey with your
-            <br />
+            <br className="hidden sm:block" />
             Senpais ✨
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="flex-1 flex justify-center items-center px-16">
-          <div className="bg-[#1B263B] backdrop-blur-lg border border-blue-300/70 rounded-3xl p-7 h-96 w-full max-w-md shadow-[inset_0_0_35px_rgba(59,130,246,1)]">
-            <h2 className="text-white text-2xl font-bold text-center mt-3 mb-6">
+        <div className="flex-1 flex justify-center items-center px-4 sm:px-8 lg:px-16 mt-8 lg:mt-0">
+          <div className="bg-[#1B263B] backdrop-blur-lg border border-blue-300/70 rounded-3xl p-4 sm:p-7 w-full max-w-md shadow-[inset_0_0_35px_rgba(59,130,246,1)]">
+            <h2 className="text-white text-xl sm:text-2xl font-bold text-center mt-3 mb-6">
               Log in
             </h2>
 
             {message && (
-              <div className="mb-4 text-center text-white-400">{message}</div>
+              <div className="mb-4 text-center text-white-400 text-sm">{message}</div>
             )}
             <form onSubmit={handleSubmit} className="grid justify-center">
-              <div className="mb-4 w-64">
+              <div className="mb-4 w-full max-w-xs sm:w-64">
                 <input
                   type="email"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-3xl text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-3xl text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 text-sm sm:text-base"
                 />
               </div>
 
@@ -190,19 +190,19 @@ function Login() {
                   placeholder="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-3xl text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-3xl text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 text-sm sm:text-base"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-medium border border-white rounded-3xl hover:from-indigo-600 hover:to-blue-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30 active:translate-y-0 transition-all duration-300 tracking-wide"
+                className="w-full py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-medium border border-white rounded-3xl hover:from-indigo-600 hover:to-blue-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30 active:translate-y-0 transition-all duration-300 tracking-wide text-sm sm:text-base"
               >
                 Log in
               </button>
             </form>
 
-            <div className="text-center mt-5 text-slate-400 text-sm">
+            <div className="text-center mt-5 text-slate-400 text-xs sm:text-sm">
               Don't have an account?{" "}
               <a
                 href="/signup"

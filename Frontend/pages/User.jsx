@@ -102,10 +102,10 @@ function User() {
   return (
     <div className="min-h-screen bg-[#0D1B2A]">
       <Navbar_ />
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center mb-12">
-          <div className="relative mr-8">
-            <div className="w-40 h-40 rounded-full bg-slate-700 border-4 border-slate-600 overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start mb-8 sm:mb-12">
+          <div className="relative mb-4 sm:mb-0 sm:mr-8">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-slate-700 border-4 border-slate-600 overflow-hidden">
               <img
                 src="/senpai_bg.png"
                 alt={user.fullName}
@@ -114,11 +114,11 @@ function User() {
             </div>
           </div>
 
-          <div className="flex-1">
-            <h1 className="text-white text-4xl font-bold mb-2">
+          <div className="flex-1 text-center sm:text-left">
+            <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
               {user.fullName}
             </h1>
-            <p className="text-slate-400 text-lg mb-4">
+            <p className="text-slate-400 text-base sm:text-lg mb-4">
               {user.kohaiCount ?? 0} kohai | {drops.length ?? 0} drops
             </p>
 
@@ -127,7 +127,7 @@ function User() {
               user.role === "senpai" && (
                 <button
                   onClick={handleFollowToggle}
-                  className={`w-60 py-3 px-6 font-semibold rounded-full transition-all duration-300 ${
+                  className={`w-full sm:w-60 py-3 px-6 font-semibold rounded-full transition-all duration-300 text-sm sm:text-base ${
                     isFollowing
                       ? "bg-gray-600 text-gray-300 hover:opacity-80"
                       : "bg-[#4800C4] text-white hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
