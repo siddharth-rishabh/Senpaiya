@@ -86,13 +86,14 @@ const CreateDrop = () => {
               {/* Description */}
               <div>
                 <label className="block text-slate-300 text-sm font-medium mb-2">
-                  Description (Optional)
+                  Description*
                 </label>
                 <textarea
                   rows="6"
                   placeholder="Add more details, code snippets, or context..."
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
+                  required
                   className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
                 ></textarea>
                 <p className="text-slate-500 text-xs mt-2">
