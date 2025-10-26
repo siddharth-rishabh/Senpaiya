@@ -17,7 +17,7 @@ function Home() {
         </div>
 
         {/* Right Side - Buzz */}
-        <div className="lg:sticky lg:top-6">
+        <div className="lg:sticky lg:top-6 sm:hidden">
           <Buzz />
         </div>
       </div>
