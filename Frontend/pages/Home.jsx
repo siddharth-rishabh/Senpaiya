@@ -17,7 +17,7 @@ function Home() {
         </div>
 
         {/* Right Side - Buzz */}
-        <div className="w-80 sticky top-6">
+        <div className=" sticky top-6">
           <Buzz />
         </div>
       </div>
