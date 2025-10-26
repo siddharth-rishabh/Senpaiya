@@ -54,7 +54,7 @@ const Drop = ({ drop, onLike, onDelete }) => {
               {drop.author?.fullName || "Anonymous"}
             </h3>
             <p className="text-slate-400 text-xs sm:text-sm">
-               {drop.author?.branch || "Branch"} '{drop.author?.batch || "Batch"} | {drop.author?.college || "College"}
+               {drop.author?.branch || "Branch"} | {drop.author?.college || "CGC Landran"}
             </p>
           </div>
         </div>
