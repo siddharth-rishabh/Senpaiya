@@ -19,8 +19,8 @@ function Navbar_() {
   };
 
   return (
-    <div className="bg-[#1F2937] w-screen mt-0 p-0 sticky top-0 z-10">
-      <div className="bg-[#1F2937] text-white rounded-2xl flex items-center my-2 mx-3">
+    <div className="bg-[#0D1B2A] w-full mt-0 p-2 sticky top-0 z-10">
+      <div className="bg-[#1F2937] text-white rounded-2xl flex items-center my-2">
         <div className="w-1/2">
           <Link to="/home">
             <img
