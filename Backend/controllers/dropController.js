@@ -52,6 +52,29 @@ const likeDrop = async (req, res) => {
   }
 };
 
+// ✅ Delete a Drop
+const deleteDrop = async (req, res) => {
+  try {
+    const drop = await Drop.findById(req.params.id);
+
+    if (!drop) {
+      return res.status(404).json({ message: "Drop not found" });
+    }
+
+    // Check if the user is the author
+    if (drop.author.toString() !== req.user.id) {
+      return res.status(403).json({ message: "You can only delete your own drops" });
+    }
+
+    await Drop.findByIdAndDelete(req.params.id);
+    res.json({ message: "Drop deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting drop:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+
 // Get all drops by a specific user
 const dropByUser = async (req, res) => {
   try {
@@ -70,5 +93,6 @@ module.exports = {
   getAllDrops,
   getDropById,
   likeDrop,
+  deleteDrop,
   dropByUser
 };
