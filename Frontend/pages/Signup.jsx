@@ -229,8 +229,8 @@ function Signup() {
                   className="w-full px-4 py-3 bg-slate-600/80 border border-slate-500/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-3 focus:ring-blue-500/10 transition-all duration-300 hover:border-slate-400/60"
                 >
                   <option value="">Please choose your role</option>
-                  <option value="senpai">Senpai</option>
-                  <option value="kohai">Kohai</option>
+                  <option value="senpai">Senpai(Want to Guide)</option>
+                  <option value="kohai">Kohai(Want Guidance)</option>
                 </select>
               </div>
 
