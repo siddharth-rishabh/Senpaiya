@@ -83,6 +83,10 @@ function User() {
     );
   };
 
+  const handleDelete = (dropId) => {
+  setDrops((prevDrops) => prevDrops.filter((drop) => drop._id !== dropId));
+};
+
   if (loading) return <Loader />;
   if (error)
     return (
@@ -148,7 +152,7 @@ function User() {
             </p>
           ) : (
             drops.map((drop) => (
-              <Drop key={drop._id} drop={{ ...drop, author: user }} onLike={handleLike} />
+              <Drop key={drop._id} drop={{ ...drop, author: user }} onLike={handleLike} onDelete={handleDelete} />
             ))
           )}
         </div>

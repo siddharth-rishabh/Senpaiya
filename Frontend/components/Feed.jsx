@@ -29,6 +29,10 @@ function Feed() {
     );
   };
 
+  const handleDelete = (dropId) => {
+    setDrops(prev => prev.filter(drop => drop._id !== dropId));
+  };
+
   if (loading) return <Loader />;
 
   return (
@@ -37,7 +41,7 @@ function Feed() {
         <p className="text-gray-400 text-center">No posts yet</p>
       ) : (
         drops.map(drop => (
-          <Drop key={drop._id} drop={drop} onLike={handleLike} />
+          <Drop key={drop._id} drop={drop} onLike={handleLike} onDelete={handleDelete} />
         ))
       )}
     </div>
